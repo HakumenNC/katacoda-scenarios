@@ -7,7 +7,7 @@ Create the `postgresql-sms-sink.json` connector :
 curl http://localhost:8083/connectors \
     -X POST \
     -H "Content-Type: application/json" \
-    --data @/usr/local/bin/connectors/postgresql-sms-sink.json
+    --data @/usr/local/bin/postgresql-sms-sink.json
 ```{{execute}}
 
 ## Connector status
