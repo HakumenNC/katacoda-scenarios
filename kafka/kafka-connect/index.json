@@ -46,12 +46,11 @@
     }
   },
   "environment": {
-    "uilayout": "terminal",
+    "uilayout": "terminal-terminal",
     "terminals": [
       {"name": "install", "target": "host01"},
       {"name": "running", "target": "host01"},
-      {"name": "producer", "target": "host01"},
-      {"name": "consumer", "target": "host02"}
+      {"name": "producer", "target": "host01"}
     ]
   },
   "backend": {
