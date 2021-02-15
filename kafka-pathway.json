@@ -1,0 +1,11 @@
+{
+  "title": "Kafka",
+  "description": "Kafka scenarios",
+  "courses": [
+    {
+      "course_id": "kafka-connect",
+      "title": "Kafka connect",
+      "description": "Kafka connect example"
+    }
+  ]
+}
