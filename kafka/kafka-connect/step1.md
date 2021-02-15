@@ -10,7 +10,7 @@ sudo apt-get update
 ## Install cURL
 
 ```
-sudo apt-get install -y wget curl
+sudo apt-get install -y curl
 ```{{execute}}
 
 ## Install docker
