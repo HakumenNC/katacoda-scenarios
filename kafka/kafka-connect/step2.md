@@ -2,13 +2,13 @@
 Now, we can launch the environment using [`docker-compose`](https://docs.docker.com/compose/)
 
 ```
-docker-compose --project-name kafka-connect-pgsql -f /usr/local/bin/kafka-connect.yml up -d
+docker-compose --project-name kafka-connect-pgsql -f /root/kafka-connect.yml up -d
 ```{{execute}}
 
 List containers and show their status
 
 ```
-docker-compose --project-name kafka-connect-pgsql -f /usr/local/bin/kafka-connect.yml ps
+docker-compose --project-name kafka-connect-pgsql -f /root/local/bin/kafka-connect.yml ps
 ```{{execute}}
 
 > The `docker-compose` file can be viewed [here](https://github.com/adriens/presentation-kafka-connect/blob/main/uses-case.yml).
