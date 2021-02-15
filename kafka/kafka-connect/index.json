@@ -10,7 +10,7 @@
         "text": "step1.md"
       },
       {
-        "title": "Start the Kafka",
+        "title": "Start the Kafka broker",
         "text": "step2.md"
       },
       {
@@ -43,15 +43,15 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+          {"file": "kafka-connect.yml", "target": "/usr/local/bin/", "chmod": "+x"}
+      ]
     }
   },
   "environment": {
-    "uilayout": "terminal-terminal",
-    "terminals": [
-      {"name": "install", "target": "host01"},
-      {"name": "running", "target": "host01"},
-      {"name": "producer", "target": "host01"}
-    ]
+    "uilayout": "terminal-terminal"
   },
   "backend": {
     "imageid": "ubuntu:2004"
