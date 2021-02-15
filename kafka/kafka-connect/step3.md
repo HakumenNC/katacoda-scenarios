@@ -7,9 +7,9 @@ Download and extract `confluentinc-kafka-connect-jdbc` plugin
 
 ```
 wget https://d1i4a15mxbxib1.cloudfront.net/api/plugins/confluentinc/kafka-connect-jdbc/versions/10.0.1/confluentinc-kafka-connect-jdbc-10.0.1.zip \
---directory-prefix /root/plugins
+--directory-prefix plugins
 
-unzip /root/plugins/confluentinc-kafka-connect-jdbc-10.0.1.zip -d /root/plugins/
+unzip plugins/confluentinc-kafka-connect-jdbc-10.0.1.zip -d plugins/
 ```{{execute}}
 
 Restart `Kafka-connect` container
@@ -26,13 +26,17 @@ First, we ensure if `kafka-connect` is up and ready
 docker logs -f confluent-connect | grep "Kafka Connect started"
 ```{{execute}}
 
+Exit the logging viewer
+
+`^C`{{execute ctrl-seq}}
+
 ## Send configuration file
 
 ```
 curl http://localhost:8083/connectors \
     -X POST \
     -H "Content-Type: application/json" \
-    --data @/root/postgresql-sms-sink.json
+    --data @postgresql-sms-sink.json
 ```{{execute}}
 
 It is in the [postgresql-sms-sink.json](https://github.com/adriens/presentation-kafka-connect/blob/main/connectors/postgresql-sms-sink.json) where configuration like output database, table, etc. and credentials are defined.

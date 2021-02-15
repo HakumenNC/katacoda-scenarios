@@ -1,15 +1,6 @@
 
 Description : Some tools installation.
 
-## Create plugins folder
-
-> Used in further `Connectors` step
-
-```
-mkdir /root/plugins
-chmod a+rwx /root/plugins
-```{{execute}}
-
 ## Install unzip, cURL and Wget
 
 ```

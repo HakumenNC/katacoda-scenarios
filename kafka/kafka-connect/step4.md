@@ -1,7 +1,7 @@
 
 In this step, we will produce messages according a specific structure :
 
-```json
+<pre><code class="json">
 {
     "type": "object",
     "properties": {
@@ -16,14 +16,14 @@ In this step, we will produce messages according a specific structure :
         }
     }
 }
-```
+</code></pre>
 
 ## Create the producer
 
-Run a `confluentinc/cp-schema-registry:5.5.0` container in [interactive mode](https://docs.docker.com/engine/reference/commandline/run/#assign-name-and-allocate-pseudo-tty---name--it)
+Run a `confluentinc/cp-schema-registry:6.0.1` container in [interactive mode](https://docs.docker.com/engine/reference/commandline/run/#assign-name-and-allocate-pseudo-tty---name--it)
 
 ```
-docker run -it --net=host --rm --name kafka-json-producer confluentinc/cp-schema-registry:5.5.0 bash
+docker run -it --net=host --rm --name kafka-json-producer confluentinc/cp-schema-registry:6.0.1 bash
 ```{{execute}}
 
 ```
@@ -34,7 +34,7 @@ kafka-json-schema-console-producer \
     --property value.schema='{"type":"object","properties":{"phoneNumberEmitter":{"type":"string"},"phoneNumberReceiver":{"type":"string"},"message":{"type":"string"}},"additionalProperties":false}'
 ```{{execute}}
 
-## Produce message
+## Produce messages
 
 ```
 {"phoneNumberEmitter":"112233","phoneNumberReceiver":"445566","message":"Don't worry, be happy"}
