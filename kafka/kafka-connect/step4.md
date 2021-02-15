@@ -1,4 +1,23 @@
 
+In this step, we will produce messages according a specific structure :
+
+```json
+{
+    "type": "object",
+    "properties": {
+        "phoneNumberEmitter": {
+            "type": "string"
+        },
+        "phoneNumberReceiver": {
+            "type": "string"
+        },
+        "message": {
+            "type": "string"
+        }
+    }
+}
+```
+
 ## Create the producer
 
 Run a `confluentinc/cp-schema-registry:5.5.0` container in [interactive mode](https://docs.docker.com/engine/reference/commandline/run/#assign-name-and-allocate-pseudo-tty---name--it)

@@ -11,7 +11,7 @@ List containers and show their status
 docker-compose --project-name kafka-connect-pgsql -f /usr/local/bin/kafka-connect.yml ps
 ```{{execute}}
 
-The `docker-compose` file can be viewed [here](https://github.com/adriens/presentation-kafka-connect/blob/main/uses-case.yml).
+> The `docker-compose` file can be viewed [here](https://github.com/adriens/presentation-kafka-connect/blob/main/uses-case.yml).
 
 ## Explanations
 

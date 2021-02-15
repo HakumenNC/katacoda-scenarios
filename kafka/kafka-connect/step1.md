@@ -7,10 +7,10 @@ Description : Some tools installation.
 sudo apt-get update
 ```{{execute}}
 
-## Install cURL
+## Install unzip, cURL and Wget
 
 ```
-sudo apt-get install -y curl
+sudo apt-get install -y unzip curl wget
 ```{{execute}}
 
 ## Install docker
