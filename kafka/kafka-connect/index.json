@@ -46,7 +46,8 @@
     },
     "assets": {
       "host01": [
-          {"file": "kafka-connect.yml", "target": "/usr/local/bin/", "chmod": "+x"}
+          {"file": "kafka-connect.yml", "target": "/usr/local/bin/", "chmod": "+x"},
+          {"file": "postgresql-sms-sink.json", "target": "/usr/local/bin/", "chmod": "+x"}
       ]
     }
   },
