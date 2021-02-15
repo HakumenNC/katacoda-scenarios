@@ -1,7 +1,7 @@
 
 In this step, we will produce messages according a specific structure :
 
-<pre class="json">{
+<pre>{
     "type": "object",
     "properties": {
         "phoneNumberEmitter": {
