@@ -14,7 +14,7 @@ In this step, we will produce messages according a specific structure :
             "type": "string"
         }
     }
-}<code></pre>
+}</code></pre>
 
 ## Create the producer
 
