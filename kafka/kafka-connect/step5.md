@@ -2,14 +2,14 @@ Data visualisations on differents steps.
 
 ## Topic
 
-First, we consume the topic `demo.json.sms`...
+First, we consume the topic `demo.json.sms` (output on `Terminal Host 2` terminal)...
 
 ```
 docker run --net=host --rm wurstmeister/kafka:2.11-2.0.0 sh opt/kafka_2.11-2.0.0/bin/kafka-console-consumer.sh \
     --bootstrap-server localhost:9092 \
     --topic demo.json.sms \
     --from-beginning
-```{{execute}}
+```{{execute HOST2}}
 
 ## Database
 
@@ -29,4 +29,10 @@ And ensure all messages are stored on sink database
 
 ```
 select * from sms;
+```{{execute}}
+
+
+
+```
+exit
 ```{{execute}}

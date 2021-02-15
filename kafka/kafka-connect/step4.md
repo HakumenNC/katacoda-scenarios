@@ -45,3 +45,11 @@ another data examples below :
 {"phoneNumberEmitter":"445566","phoneNumberReceiver":"778899","message":"You shall not pass"}
 {"phoneNumberEmitter":"778899","phoneNumberReceiver":"665544","message":"It's dangerous to go alone"}
 ```{{execute}}
+
+Stop producing messages and exit the container
+
+`^C`{{execute ctrl-seq}}
+
+```
+exit
+```{{execute}}
