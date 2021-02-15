@@ -1,10 +1,12 @@
 
 Description : Some tools installation.
 
-## System update
+## Create plugins folder
+
+> Used in further `Connectors` step
 
 ```
-sudo apt-get update
+mkdir plugins
 ```{{execute}}
 
 ## Install unzip, cURL and Wget
