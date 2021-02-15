@@ -46,7 +46,6 @@
     }
   },
   "environment": {
-    "uilayout": "terminal-terminal",
     "terminals": [
       {"name": "install", "target": "host01"},
       {"name": "running", "target": "host01"},
