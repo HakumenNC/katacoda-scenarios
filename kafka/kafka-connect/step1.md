@@ -6,7 +6,7 @@ Description : Some tools installation.
 > Used in further `Connectors` step
 
 ```
-mkdir plugins
+mkdir –m777 plugins
 ```{{execute}}
 
 ## Install unzip, cURL and Wget
