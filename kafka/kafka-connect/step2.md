@@ -1,8 +1,6 @@
 
 Now, we can launch the environment using [`docker-compose`](https://docs.docker.com/compose/)
 
-## Up
-
 ```
 docker-compose --project-name kafka-connect-pgsql -f /usr/local/bin/kafka-connect.yml up -d
 ```{{execute}}
@@ -15,9 +13,9 @@ docker-compose --project-name kafka-connect-pgsql -f /usr/local/bin/kafka-connec
 
 The `docker-compose` file can be viewed [here](https://github.com/adriens/presentation-kafka-connect/blob/main/uses-case.yml).
 
-## Summary
+## Explanations
 
-With this single command, we have :
+With this single line command, we have :
 
 - a minimalist `kafka` environment with `zookeeper`
 - the [`confluent`](https://www.confluent.io/) elements :
