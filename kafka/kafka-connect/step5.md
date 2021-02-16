@@ -36,5 +36,5 @@ password
 And ensure all messages are stored on sink database
 
 ```
-select * from sms;
+select "phoneNumberReceiver" receiver, message, "phoneNumberEmitter" emitter from sms;
 ```{{execute T4}}

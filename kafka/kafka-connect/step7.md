@@ -48,5 +48,5 @@ curl -X GET http://localhost:8083/connectors/postgresql-sms-sink-connector/statu
 Let's check it out the database to ensure all messages are there.
 
 ```
-select * from sms;
+select "phoneNumberReceiver" n_receiver, message, "phoneNumberEmitter" n_emitter from sms;
 ```{{execute T4}}
