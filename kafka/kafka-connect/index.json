@@ -53,9 +53,9 @@
   },
   "environment": {
     "terminals": [
-      {"name": "Producer", "target": "host01"},
-      {"name": "Consumer", "target": "host01"},
-      {"name": "PostgreSQL", "target": "host01"}
+      {"name": "Producer", "command": "echo \"producer terminal\"", "target": "host01"},
+      {"name": "Consumer", "command": "echo \"consumer terminal\"", "target": "host01"},
+      {"name": "PostgreSQL", "command": "echo \"postgresql terminal\"", "target": "host01"}
   ],
     "uilayout": "terminal"
   },
