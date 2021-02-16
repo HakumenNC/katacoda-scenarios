@@ -38,9 +38,3 @@ And ensure all messages are stored on sink database
 ```
 select * from sms;
 ```{{execute T4}}
-
-
-
-```
-exit
-```{{execute T4}}

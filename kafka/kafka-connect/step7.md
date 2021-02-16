@@ -2,9 +2,9 @@ In the case where the sink database is not operational but the messsages continu
 
 ## Stop the database
 
-```bash
-docker stop postgres-sink
 ```
+docker stop postgres-sink
+```{{execute T1}}
 
 ## Produce some data
 
@@ -19,13 +19,13 @@ docker stop postgres-sink
 ## Check topic
 
 At this state, we can read `demo.json.sms` topic to be sure if the messages are in it.
-Go to Consumer tab to view it.
+Go to `Consumer` tab to view it.
 
 #### Restart the sink database
 
-```bash
-docker start postgres-sink
 ```
+docker start postgres-sink
+```{{execute T1}}
 
 ## Restart kafka-connect task
 
