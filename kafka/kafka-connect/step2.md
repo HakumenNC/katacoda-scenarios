@@ -1,13 +1,8 @@
 
 Now, we can launch the environment using [`docker-compose`](https://docs.docker.com/compose/)
 
-Clear output
-
 ```
-clear
-```{{execute T1}}
-
-```
+clear # clear output
 docker-compose --project-name kafka-connect-pgsql -f kafka-connect.yml up -d
 ```{{execute T1}}
 

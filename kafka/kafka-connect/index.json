@@ -52,6 +52,11 @@
     }
   },
   "environment": {
+    "terminals": [
+      {"name": "Producer", "target": "host01"},
+      {"name": "Consumer", "target": "host01"},
+      {"name": "PostgreSQL", "target": "host01"}
+  ],
     "uilayout": "terminal"
   },
   "backend": {

@@ -21,6 +21,7 @@ services:
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
       KAFKA_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://0.0.0.0:9092
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_CONFLUENT_SCHEMA_REGISTRY_URL: http://confluent-registry:8081
     volumes:
       - ./plugins:/usr/local/share/kafka/plugins
 
