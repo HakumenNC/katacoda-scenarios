@@ -1,1 +1,1 @@
-Thanks for following this scenario :wave: !
+Thanks for following this scenario !
