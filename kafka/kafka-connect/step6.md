@@ -22,18 +22,4 @@ kafka-json-schema-console-producer \
 {"phoneNumberEmitter":"789987","phoneNumberReceiver":"456654","message":"The computer was born to solve problems that did not exist before"}
 ```{{execute T2}}
 
-```
-{"phoneNumberEmitter":"123546","phoneNumberReceiver":"321654","message":"Il est bon ou quoi?"}
-{"phoneNumberEmitter":"654987","phoneNumberReceiver":"789456","message":"Net"}
-{"phoneNumberEmitter":"112233","phoneNumberReceiver":"445566","message":"Sakébon"}
-{"phoneNumberEmitter":"665544","phoneNumberReceiver":"998877","message":"Kalolo alors"}
-{"phoneNumberEmitter":"789987","phoneNumberReceiver":"456654","message":"Ok tal"}
-```{{execute T2}}
-
 Stop producing messages and exit the container
-
-`^C`{{execute ctrl-seq}}
-
-```
-exit
-```{{execute T2}}

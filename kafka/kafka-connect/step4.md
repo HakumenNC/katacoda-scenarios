@@ -21,6 +21,10 @@ In this step, we will produce messages according a specific structure :
 Run a `confluentinc/cp-schema-registry:6.0.1` container in [interactive mode](https://docs.docker.com/engine/reference/commandline/run/#assign-name-and-allocate-pseudo-tty---name--it)
 
 ```
+echo "Open in Producer terminal"
+```{{execute T2}}
+
+```
 docker run -it --net=host --rm --name kafka-json-producer confluentinc/cp-schema-registry:6.0.1 bash
 ```{{execute T2}}
 
@@ -44,12 +48,4 @@ another data examples below :
 {"phoneNumberEmitter":"332211","phoneNumberReceiver":"665544","message":"The last but not least"}
 {"phoneNumberEmitter":"445566","phoneNumberReceiver":"778899","message":"You shall not pass"}
 {"phoneNumberEmitter":"778899","phoneNumberReceiver":"665544","message":"It's dangerous to go alone"}
-```{{execute T2}}
-
-Stop producing messages and exit the container
-
-`^C`{{execute ctrl-seq}}
-
-```
-exit
 ```{{execute T2}}

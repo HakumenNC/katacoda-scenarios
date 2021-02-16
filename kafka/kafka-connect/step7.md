@@ -1,19 +1,52 @@
-See some differents issues.
+In the case where the sink database is not operational but the messsages continue to be produced on the topic, let's see the data's behaviour on recovery.
 
-## Malformed message
+## Stop the database
+
+```bash
+docker stop postgres-sink
+```
+
+## Produce some data
 
 ```
-docker run -it --net=host --rm --name kafka-json-producer confluentinc/cp-schema-registry:6.0.1 bash
+{"phoneNumberEmitter":"123546","phoneNumberReceiver":"321654","message":"Il est bon ou quoi?"}
+{"phoneNumberEmitter":"654987","phoneNumberReceiver":"789456","message":"Net"}
+{"phoneNumberEmitter":"112233","phoneNumberReceiver":"445566","message":"Sakébon"}
+{"phoneNumberEmitter":"665544","phoneNumberReceiver":"998877","message":"Kalolo alors"}
+{"phoneNumberEmitter":"789987","phoneNumberReceiver":"456654","message":"Ok tal"}
 ```{{execute T2}}
 
+## Check topic
+
+At this state, we can read `demo.json.sms` topic to be sure if the messages are in it.
+Go to Consumer tab to view it.
+
+#### Restart the sink database
+
+```bash
+docker start postgres-sink
 ```
-kafka-json-schema-console-producer \
-    --broker-list localhost:9092 \
-    --topic demo.json.sms \
-    --property schema.registry.url=http://localhost:8081 \
-    --property value.schema='{"type":"object","properties":{"phoneNumberEmitter":{"type":"string"},"phoneNumberReceiver":{"type":"string"},"message":{"type":"string"}},"additionalProperties":false}'
-```{{execute T2}}
+
+## Restart kafka-connect task
 
 ```
-{"phoneNumberEmitter":"123546","phoneNumberReceiver":"321654","text":"oh no, this is a wrong structure"}
-```{{execute T2}}
+curl -X GET http://localhost:8083/connectors/postgresql-sms-sink-connector/status | jq
+```{{execute T1}}
+
+The task `0` is on a [`FAILED`](https://docs.confluent.io/home/connect/monitoring.html#connector-and-task-status) state, we have to restart it to send all message stayed in the topic
+
+```
+curl -X POST http://localhost:8083/connectors/postgresql-sms-sink-connector/tasks/0/restart
+```{{execute T1}}
+
+```
+curl -X GET http://localhost:8083/connectors/postgresql-sms-sink-connector/status | jq
+```{{execute T1}}
+
+## Check table
+
+Let's check it out the database to ensure all messages are there.
+
+```
+select * from sms;
+```{{execute T4}}

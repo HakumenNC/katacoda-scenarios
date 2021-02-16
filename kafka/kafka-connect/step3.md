@@ -32,7 +32,7 @@ Exit the logging viewer
 `^C`{{execute ctrl-seq}}
 
 ```
-clear # clean output
+clear
 ```{{execute T1}}
 
 ## Send configuration file
