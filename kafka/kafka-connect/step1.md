@@ -5,7 +5,7 @@ Description : Some tools installation.
 
 ```
 sudo apt-get install -y unzip curl wget
-```{{execute}}
+```{{execute T1}}
 
 ## Install docker
 
@@ -18,8 +18,8 @@ sudo apt-get remove docker docker-engine docker.io
 sudo apt install docker.io
 sudo systemctl start docker
 sudo systemctl enable docker
-```{{execute}}
+```{{execute T1}}
 
 `docker` is finally installed :
 
-`docker --version`{{execute}}
+`docker --version`{{execute T1}}

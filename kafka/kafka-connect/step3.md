@@ -1,6 +1,12 @@
 
 Create the `postgresql-sms-sink.json` connector.
 
+Clear output
+
+```
+clear
+```{{execute T1}}
+
 ## Plugin installation
 
 Download and extract `confluentinc-kafka-connect-jdbc` plugin
@@ -16,7 +22,7 @@ Restart `Kafka-connect` container
 
 ```
 docker restart confluent-connect
-```{{execute}}
+```{{execute T1}}
 
 ## Check Kafka-connect status
 
@@ -24,7 +30,7 @@ First, we ensure if `kafka-connect` is up and ready
 
 ```
 docker logs -f confluent-connect | grep "Kafka Connect started"
-```{{execute}}
+```{{execute T1}}
 
 Exit the logging viewer
 
@@ -37,7 +43,7 @@ curl http://localhost:8083/connectors \
     -X POST \
     -H "Content-Type: application/json" \
     --data @postgresql-sms-sink.json
-```{{execute}}
+```{{execute T1}}
 
 It is in the [postgresql-sms-sink.json](https://github.com/adriens/presentation-kafka-connect/blob/main/connectors/postgresql-sms-sink.json) where configuration like output database, table, etc. and credentials are defined.
 
@@ -47,6 +53,6 @@ Check connector's state :
 
 ```
 curl -X GET http://localhost:8083/connectors/postgresql-sms-sink-connector/status | jq
-```{{execute}}
+```{{execute T1}}
 
 > Kafka and the postgreSQL are now *linked*

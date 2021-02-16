@@ -5,6 +5,10 @@ Data visualisations on differents steps.
 First, we consume the topic `demo.json.sms` (output on `Terminal Host 2` terminal)...
 
 ```
+echo "Open a new Terminal for consumer"
+```{{execute T2}}
+
+```
 docker run --net=host --rm wurstmeister/kafka:2.11-2.0.0 sh opt/kafka_2.11-2.0.0/bin/kafka-console-consumer.sh \
     --bootstrap-server localhost:9092 \
     --topic demo.json.sms \
@@ -17,22 +21,22 @@ docker run --net=host --rm wurstmeister/kafka:2.11-2.0.0 sh opt/kafka_2.11-2.0.0
 
 ```
 docker run --name postgres-psql -it --rm --network host postgres psql -h localhost -p 5433 -U user -d db
-```{{execute}}
+```{{execute T1}}
 
 Fill the password
 
 ```
 password
-```{{execute}}
+```{{execute T1}}
 
 And ensure all messages are stored on sink database
 
 ```
 select * from sms;
-```{{execute}}
+```{{execute T1}}
 
 
 
 ```
 exit
-```{{execute}}
+```{{execute T1}}

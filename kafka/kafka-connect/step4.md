@@ -1,3 +1,9 @@
+Clear output
+
+```
+clear
+```{{execute T1}}
+
 
 In this step, we will produce messages according a specific structure :
 
@@ -22,7 +28,7 @@ Run a `confluentinc/cp-schema-registry:6.0.1` container in [interactive mode](ht
 
 ```
 docker run -it --net=host --rm --name kafka-json-producer confluentinc/cp-schema-registry:6.0.1 bash
-```{{execute}}
+```{{execute T1}}
 
 ```
 kafka-json-schema-console-producer \
@@ -30,13 +36,13 @@ kafka-json-schema-console-producer \
     --topic demo.json.sms \
     --property schema.registry.url=http://localhost:8081 \
     --property value.schema='{"type":"object","properties":{"phoneNumberEmitter":{"type":"string"},"phoneNumberReceiver":{"type":"string"},"message":{"type":"string"}},"additionalProperties":false}'
-```{{execute}}
+```{{execute T1}}
 
 ## Produce messages
 
 ```
 {"phoneNumberEmitter":"112233","phoneNumberReceiver":"445566","message":"Don't worry, be happy"}
-```{{execute}}
+```{{execute T1}}
 
 another data examples below :
 
@@ -44,7 +50,7 @@ another data examples below :
 {"phoneNumberEmitter":"332211","phoneNumberReceiver":"665544","message":"The last but not least"}
 {"phoneNumberEmitter":"445566","phoneNumberReceiver":"778899","message":"You shall not pass"}
 {"phoneNumberEmitter":"778899","phoneNumberReceiver":"665544","message":"It's dangerous to go alone"}
-```{{execute}}
+```{{execute T1}}
 
 Stop producing messages and exit the container
 
@@ -52,4 +58,4 @@ Stop producing messages and exit the container
 
 ```
 exit
-```{{execute}}
+```{{execute T1}}
