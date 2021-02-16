@@ -9,7 +9,7 @@ docker run --net=host --rm wurstmeister/kafka:2.11-2.0.0 sh opt/kafka_2.11-2.0.0
     --bootstrap-server localhost:9092 \
     --topic demo.json.sms \
     --from-beginning
-```{{execute HOST2}}
+```{{execute T2}}
 
 ## Database
 
